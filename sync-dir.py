@@ -1,7 +1,39 @@
 import os
+import hashlib
+
+class Dispatcher:
+    def __init__(self):
+        self.directories_list = []
+
+    def add_directory(self, directory):
+        self.directories_list.append(directory)
+
+    def synchronize_directories(self):
+        return
+    
+    def _compare_directories(self):
+        return
+    
+    def _compare_files(self):
+        return
+    
+    
+class Directory:
+    def __init__(self, path):
+        self.path = path
+        self.files = os.listdir(path)
+    
+    def create_file(self,file):
+        return
+    
+    def update_file(self,file):
+        return
+    
+    def delete_file(self,file):
+        return
 
 if __name__ == "__main__":
-
+    
     source = input('Path to source directory: ')
 
     if not os.path.isdir(source):
@@ -18,3 +50,10 @@ if __name__ == "__main__":
         else:
             print('Can\'t synchronize directories without a replica directory.')
             exit()
+
+    source_dir = Directory(source)
+    replica_dir = Directory(replica)
+
+    sync_dispatcher = Dispatcher()
+    sync_dispatcher.add_directory(source_dir)
+    sync_dispatcher.add_directory(replica_dir)
