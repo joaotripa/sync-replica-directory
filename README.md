@@ -1,6 +1,6 @@
 # Directory Synchronization Script
 
-This is a script to synchronize the content of two directories, files and subdirectories.
+This is a script to synchronize the content of two directories, files and subdirectories, only using system functions.
 The synchronization is only one way, you provide a source directory and the path for a replica. It synchronizes continuously in a time interval that you define.
 Operations are logged in a file of your choice.
 
